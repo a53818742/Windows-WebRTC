@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f01edfa2-58c6-4132-9f90-fd142d4dc3a2" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="C:\Go" />
+  <component name="ProjectId" id="1lMW0EpogG0PLs6IwPxt8kVys0g" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\SVN\4.0\GO_WebRTC" />
+      <recent name="D:\SVN\4.0\GO_WebRTC\collider" />
+      <recent name="D:\SVN\4.0\GO_WebRTC\cert" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build ws.go">
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="GO_WebRTC" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build myWebSocket.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="GO_WebRTC" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/myWebSocket.go" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build ws.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="GO_WebRTC" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/ws.go" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build ws.go" />
+        <item itemvalue="Go Build.go build myWebSocket.go" />
+        <item itemvalue="Go Build.go build main.go" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="573" y="265" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607771647036">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="573" y="265" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.860@0.0.1440.860" timestamp="1607771647036" />
+    <state x="1018" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1040/-1600.0.1600.860/2560.0.1920.1040@0.0.2560.1040" timestamp="1607677556496" />
+    <state x="500" y="184" key="FileChooserDialogImpl" timestamp="1607771590699">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="500" y="184" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1607771590699" />
+    <state width="1340" height="188" key="GridCell.Tab.0.bottom" timestamp="1607771112353">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1340" height="188" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1607771112353" />
+    <state width="1557" height="257" key="GridCell.Tab.0.bottom/0.0.2560.1040/-1600.0.1600.860/2560.0.1920.1040@-1600.0.1600.860" timestamp="1607668650825" />
+    <state width="2517" height="217" key="GridCell.Tab.0.bottom/0.0.2560.1040/-1600.0.1600.860/2560.0.1920.1040@0.0.2560.1040" timestamp="1607677824269" />
+    <state width="1877" height="219" key="GridCell.Tab.0.bottom/0.0.2560.1040/-1600.0.1600.860/2560.0.1920.1040@2560.0.1920.1040" timestamp="1607414677264" />
+    <state width="1340" height="188" key="GridCell.Tab.0.center" timestamp="1607771112353">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1340" height="188" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1607771112353" />
+    <state width="1557" height="257" key="GridCell.Tab.0.center/0.0.2560.1040/-1600.0.1600.860/2560.0.1920.1040@-1600.0.1600.860" timestamp="1607668650824" />
+    <state width="2517" height="217" key="GridCell.Tab.0.center/0.0.2560.1040/-1600.0.1600.860/2560.0.1920.1040@0.0.2560.1040" timestamp="1607677824268" />
+    <state width="1877" height="219" key="GridCell.Tab.0.center/0.0.2560.1040/-1600.0.1600.860/2560.0.1920.1040@2560.0.1920.1040" timestamp="1607414677264" />
+    <state width="1340" height="188" key="GridCell.Tab.0.left" timestamp="1607771112353">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1340" height="188" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1607771112353" />
+    <state width="1557" height="257" key="GridCell.Tab.0.left/0.0.2560.1040/-1600.0.1600.860/2560.0.1920.1040@-1600.0.1600.860" timestamp="1607668650824" />
+    <state width="2517" height="217" key="GridCell.Tab.0.left/0.0.2560.1040/-1600.0.1600.860/2560.0.1920.1040@0.0.2560.1040" timestamp="1607677824268" />
+    <state width="1877" height="219" key="GridCell.Tab.0.left/0.0.2560.1040/-1600.0.1600.860/2560.0.1920.1040@2560.0.1920.1040" timestamp="1607414677264" />
+    <state width="1340" height="188" key="GridCell.Tab.0.right" timestamp="1607771112353">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1340" height="188" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1607771112353" />
+    <state width="1557" height="257" key="GridCell.Tab.0.right/0.0.2560.1040/-1600.0.1600.860/2560.0.1920.1040@-1600.0.1600.860" timestamp="1607668650825" />
+    <state width="2517" height="217" key="GridCell.Tab.0.right/0.0.2560.1040/-1600.0.1600.860/2560.0.1920.1040@0.0.2560.1040" timestamp="1607677824269" />
+    <state width="1877" height="219" key="GridCell.Tab.0.right/0.0.2560.1040/-1600.0.1600.860/2560.0.1920.1040@2560.0.1920.1040" timestamp="1607414677264" />
+    <state x="221" y="74" key="SettingsEditor" timestamp="1607681282311">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="221" y="74" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1607681282311" />
+    <state x="3183" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607409705455">
+      <screen x="2560" y="0" width="1920" height="1040" />
+    </state>
+    <state x="3183" y="225" width="672" height="678" key="search.everywhere.popup/0.0.2560.1040/-1600.0.1600.860/2560.0.1920.1040@2560.0.1920.1040" timestamp="1607409705455" />
+  </component>
+</project>

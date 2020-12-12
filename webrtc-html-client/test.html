@@ -1,0 +1,28 @@
+<html>
+<!-- 	<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script> -->
+	<script src="./js/adapter.js"></script>
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<script src="./js/vconsole.min.js"></script>
+	<script src="./js/mdata.js"></script>
+	<script src="./js/myWebRTC.new.js"></script>
+	<body>
+		<script>
+			//const adapter = require("webrtc-adapter");
+			// 仅仅用于控制哪一端的浏览器发起offer，#号后面有值的一方发起
+			var vConsole = new VConsole();
+			let username=($$().getUrlString("username")!="")?$$().getUrlString("username"):$$().guid10();
+			console.log("我的用户名",username);
+			var webrtc = myWebRTC({
+				"websocket":"wss://www.think-eee.cloud:22408/websocket",//房间服务器地址
+				"room":($$().getUrlString("room")!="")?$$().getUrlString("room"):"hello,test",
+				"username":username,
+				"admin":($$().getUrlString("admin")!="")?$$().getUrlString("admin"):"0",//权限，1为管理员，其他为非管理员
+				"speed":($$().getUrlString("speed")!="")?$$().getUrlString("speed"):"low",//视频画质，hight为高清，low为流畅
+				"video":($$().getUrlString("video")!="")?$$().getUrlString("video"):"before",//视频源，close/after/before/screen/其他
+				"audio":($$().getUrlString("audio")!="")?$$().getUrlString("audio"):"open",//音频源，close/open
+				"css":"./css/myWebRTC.css"//CSS路径
+			});
+			webrtc.Init();
+		</script>
+	</body>
+</html>

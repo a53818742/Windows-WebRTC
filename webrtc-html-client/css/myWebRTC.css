@@ -1,0 +1,118 @@
+@charset "utf-8";
+:root{
+	--myWebRTC-总宽度:100;
+	--myWebRTC-块宽度:50% - 2px;
+	--myWebRTC-块高度:50% - 2px;
+	--myWebRTC-控制图片宽度:32px;
+	--myWebRTC-主控制条宽度:192px;
+	--myWebRTC-福控制条宽度:64px;
+	--myWebRTC-顶部高度:50;
+}
+*{outline: none;font-size: 10px;}
+.myWebRTC-div{
+	width:  calc(var(--myWebRTC-块宽度));
+	opacity:1;
+	position: relative;
+	height: calc(var(--myWebRTC-块高度));
+	overflow: hidden;
+	display: inline-block;
+	background-color: rgb(0,0,0);
+	border: 1px solid whitesmoke;
+}
+
+
+.myWebRTC-div-video{
+	width:  100%;
+	opacity:1;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	
+}
+
+.myWebRTC-div-controldiv{
+	width:  1005;
+	opacity:1;
+	height: 30px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	
+}
+.myWebRTC-div-me{
+	width: calc(var(--myWebRTC-主控制条宽度));
+}
+.myWebRTC-div-me>tr>td{
+	width: calc(var(--myWebRTC-控制图片宽度));
+}
+
+.myWebRTC-div-controltable{
+	width: calc(var(--myWebRTC-副控制条宽度));
+}
+.myWebRTC-div-controltable>tr>td{
+	width: calc(var(--myWebRTC-控制图片宽度));
+}
+.myWebRTC-div-video_change{
+	background-image: url(../img/qh2.png);
+	background-position: center center;
+	background-repeat: no-repeat no-repeat;
+	background-size: 120% auto;
+}
+
+.myWebRTC-div-video_control[switch!="close"]{
+	background-image: url(../img/sy2.png);
+	background-position: center center;
+	background-repeat: no-repeat no-repeat;
+	background-size: 120% auto;
+}
+.myWebRTC-div-video_control[switch="close"]{
+	background-image: url(../img/jy2.png);
+	background-position: center center;
+	background-repeat: no-repeat no-repeat;
+	background-size: 120% auto;
+}
+
+
+
+
+.myWebRTC-div-audio_control[switch="close"]{
+	background-image: url(../img/jy2.png);
+	background-position: center center;
+	background-repeat: no-repeat no-repeat;
+	background-size: 120% auto;
+}
+.myWebRTC-div-audio_control[switch="open"]{
+	background-image: url(../img/sy2.png);
+	background-position: center center;
+	background-repeat: no-repeat no-repeat;
+	background-size: 120% auto;
+}
+
+
+
+.myWebRTC-div-all_video_control_open{
+	background-image: url(../img/qbsp2.png);
+	background-position: center center;
+	background-repeat: no-repeat no-repeat;
+	background-size: 120% auto;
+}
+.myWebRTC-div-all_video_control_close{
+	background-image: url(../img/qbgb2.png);
+	background-position: center center;
+	background-repeat: no-repeat no-repeat;
+	background-size: 120% auto;
+}
+
+.myWebRTC-div-all_audio_control_open{
+	background-image: url(../img/qbsy2.png);
+	background-position: center center;
+	background-repeat: no-repeat no-repeat;
+	background-size: 120% auto;
+}
+.myWebRTC-div-all_audio_control_close{
+	background-image: url(../img/qbjy2.png);
+	background-position: center center;
+	background-repeat: no-repeat no-repeat;
+	background-size: 120% auto;
+}
