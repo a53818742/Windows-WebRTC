@@ -9,11 +9,14 @@ turn/sturn服务器是对coturn进行windows编译的。
 
 1.我需要做什么？
 
-  a.turn/sturn服务器是需要采用https证书，因此，您需要自己申请一个https证书，然后放在cert目录下，名称分别为cert.pem和key.pem，房间服务器和turn/sturn服务器同样采用这里的https证书。
+  a.turn/sturn服务器是需要采用https证书，因此，您需要自己申请一个https证书，然后放在cert目录下，名称分别为cert.pem和key.pem，房间服务器、turn/sturn服务器、web服务器同样采用这里的https证书。
   
-  b.客户端是webrtc-html-client目录，您需要将这个目录拷贝到自己的https网站下面，然后将test.html里面的websocket链接地址指向房间服务器的链接地址。
+  b.web服务器采用nginx，已经配置好https环境，您只需要在conf/nginx.conf中修改端口号即可。
+  
+  c.webrtc网页的代码在html目录中。
 
-2. text.html的各项参数。
+2. index.html的各项参数。参考阅读我.doc
+	
 
   
   
