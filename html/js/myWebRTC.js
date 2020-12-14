@@ -14,26 +14,27 @@ myWebRTC.a = myWebRTC .prototype.a = function(Config) {
 	this.audios={};
 	this.myBrowser=$$().browserLight();
 	this.videos={};//stun:stun.l.google.com:19302
-	// this.iceServer ={
-	// 	"iceServers": [{
-	// 		"url": "stun:www.think-eee.cloud:22407"
-	// 	}, {
-	// 		"url": "turn:www.think-eee.cloud:22407",
-	// 		"username": "zjf",
-	// 		"credential": "123456"
-	// 	}]
-	// };
-
 	
 	this.iceServer ={
 		"iceServers": [{
-			"url": "stun:stun.l.google.com:19302"
+			"url": "stun:www.think-eee.cloud:22407"
 		}, {
 			"url": "turn:www.think-eee.cloud:22407",
-			"username": "webrtc@live.com",
-			"credential": "muazkh"
+			"username": "zjf",
+			"credential": "123456"
 		}]
 	};
+
+	
+	// this.iceServer ={
+	// 	"iceServers": [{
+	// 		"url": "stun:stun.l.google.com:19302"
+	// 	}, {
+	// 		"url": "turn:www.think-eee.cloud:22407",
+	// 		"username": "webrtc@live.com",
+	// 		"credential": "muazkh"
+	// 	}]
+	// };
 
 	this.Config=Config;
 	this.loadcss = function() {
@@ -51,13 +52,26 @@ myWebRTC.a = myWebRTC .prototype.a = function(Config) {
 	return this;
 }
 myWebRTC.a.prototype.Init=function(){
-	this.allclose=false;;
-	 if (window.stream) {
-	        window.stream.getTracks().forEach(track => {
-	            track.stop();
-	        });
-	    }
-	this.InitStream(this.Config)
+	let that=this;
+	if(!navigator.getUserMedia){
+		alert("您当前的浏览器不支持音视频通话！")
+		return;
+	}
+	that.EnumDevices(function(){
+		if($$().getJSONlength(that.videos)==0 && $$().getJSONlength(that.audios)==0){
+			alert("您当前的设备无任何音频或视频设备，不支持音视频通话！");
+			return;
+		}
+		
+		that.allclose=false;;
+		 if (window.stream) {
+		        window.stream.getTracks().forEach(track => {
+		            track.stop();
+		        });
+		    }
+		that.InitStream(that.Config)
+	});
+	
 }
 myWebRTC.a.prototype.SendData=function(name,str){
 	this.socket.send($$().zip().zip(str));
@@ -93,7 +107,6 @@ myWebRTC.a.prototype.InitWebSocket = function() {
 			//获取服务器返回的握手消息
 			try{
 				let data=json.data;
-				console.log("收到数据:",data)
 				if(that.Config.admin!="1"){
 					if(data=="Audio"){
 						that.AudioControl(true);
@@ -135,6 +148,9 @@ myWebRTC.a.prototype.InitWebSocket = function() {
 			try{
 				if(typeof(that.users[json.username].div)=="object"){
 					$$().removeElem(that.users[json.username].div);
+					$$().removeElem(that.users[json.username].t1);
+					$$().removeElem(that.users[json.username].t2);
+					$$().removeElem(that.users[json.username].t3);
 				}
 			}catch(e){
 				//TODO handle the exception
@@ -246,7 +262,7 @@ myWebRTC.a.prototype.Connect2NewUser=function(new_username,video,audio,device){
 			"username":new_username,
 			"audio":audio,
 			"video":video,
-			"device":that.users[new_username].device
+			"device":device
 		})
 	};
 	that.users[new_username].pc.addStream(that.stream);
@@ -295,7 +311,7 @@ myWebRTC.a.prototype.InitStream = function(Config) {
 		//处理媒体流创建失败错误
 		console.log('getUserMedia error: ' + error);
 	};
-	that.EnumDevices();
+
 	//TODO handle the exception
 	if(that.Config.video=="screen" && that.myBrowser.device=="PC"){
 		let mediaconfig=that.InitMediaConfig();
@@ -460,7 +476,6 @@ myWebRTC.a.prototype.VideoChange=function(){
 		console.log(e)
 	}
 }
-//对房间内所有人广播消息
 myWebRTC.a.prototype.Toall = function(data){
 	let that=this;
 	that.SendData("toall",JSON.stringify({
@@ -471,7 +486,6 @@ myWebRTC.a.prototype.Toall = function(data){
 		"data": data
 	}));
 }
-//对房间内某个人发送消息
 myWebRTC.a.prototype.Touser = function(user,data){
 	let that=this;
 	that.SendData("toall",JSON.stringify({
@@ -483,7 +497,7 @@ myWebRTC.a.prototype.Touser = function(user,data){
 		"data": data
 	}));
 }
-myWebRTC.a.prototype.EnumDevices = function(){
+myWebRTC.a.prototype.EnumDevices = function(callback){
 	let that=this;
 	try{
 		try{
@@ -497,6 +511,9 @@ myWebRTC.a.prototype.EnumDevices = function(){
 							that.videos[device.deviceId]=device;
 						}
 				  });
+				  try{
+					  callback()
+				  }catch(e){}
 			})
 			.catch(function(err) {
 				console.log(err.name + ": " + err.message);
@@ -513,6 +530,9 @@ myWebRTC.a.prototype.EnumDevices = function(){
 							that.videos[device.deviceId]=device;
 						}
 				  });
+				  try{
+				  		callback()
+				  }catch(e){}
 			})
 			.catch(function(err) {
 				console.log(err.name + ": " + err.message);
@@ -520,16 +540,9 @@ myWebRTC.a.prototype.EnumDevices = function(){
 		}
 	}catch(e){
 		//TODO handle the exception
+		alert("您的设备不支持音视频通话")
 	}
 }
-
-/*
-* 创建一个video对象
-* Config json, {username:用户名;stream:视频流;Audio:声音:0静音1有声音,Video}
-* 
-* 
-* ***
-*/
 myWebRTC.a.prototype.CreateVideo = function(Config) {
 	let that=this;
 	try{
@@ -649,12 +662,9 @@ myWebRTC.a.prototype.CreateVideo = function(Config) {
 			$$(controltable.tr[0].td[2]).addEvent("click",function(){
 				that.Touser(Config.username,"AudioControl");
 			})
-
-			
 		}
-		
 	}
-	if(that.Config.admin=="0"){
+	if(that.Config.admin!="1"){
 		controldiv.style.display="none";
 	}
 }

@@ -1,17 +1,13 @@
 <html>
-<!-- 	<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script> -->
 	<script src="./js/adapter.js"></script>
 	<script src="./js/jquery-3.3.1.min.js"></script>
 	<script src="./js/vconsole.min.js"></script>
 	<script src="./js/mdata.js"></script>
-	<script src="./js/myWebRTC.new.js"></script>
+	<script src="./js/myWebRTC.js"></script>
 	<body>
 		<script>
-			//const adapter = require("webrtc-adapter");
-			// 仅仅用于控制哪一端的浏览器发起offer，#号后面有值的一方发起
 			var vConsole = new VConsole();
 			let username=($$().getUrlString("username")!="")?$$().getUrlString("username"):$$().guid10();
-			console.log("我的用户名",username);
 			var webrtc = myWebRTC({
 				"websocket":"wss://www.think-eee.cloud:22408/websocket",//房间服务器地址
 				"room":($$().getUrlString("room")!="")?$$().getUrlString("room"):"hello,test",
